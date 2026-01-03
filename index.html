@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Joshua Blog</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Joshua Blog's</h1>
-    <p>Pendejadas y Mas :D</p>
-</header>
+<div class="desktop">
 
-<main id="posts"></main>
+    <!-- 📝 Ventana Blog / Notas -->
+    <div class="window" style="top:60px; left:60px;">
+        <div class="title-bar">📝 Mis Notas</div>
+        <div class="content">
+            <p>✦ Hoy subí un nuevo clip</p>
+            <p>✦ Pensamientos random</p>
+            <img src="bg.jpg" width="100%">
+        </div>
+    </div>
 
-<footer>
-    <p>© Nada mas :c</p>
-</footer>
+    <!-- 🎥 Ventana YouTube -->
+    <div class="window" style="top:80px; left:360px;">
+        <div class="title-bar">🎥 Últimos Videos</div>
+        <div class="content" id="youtube">
+            Cargando videos...
+        </div>
+    </div>
+
+    <!-- 🪟 Barra inferior -->
+    <div class="taskbar">
+        <span class="start">🟦 Start</span>
+        <span id="clock"></span>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
