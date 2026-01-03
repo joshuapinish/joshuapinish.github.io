@@ -1,6 +1,35 @@
 body {
-    background: #111;
+    background: #0f172a;
     color: white;
-    font-family: Arial;
-    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    background: #1e293b;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: #020617;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #38bdf8;
+    color: black;
 }
