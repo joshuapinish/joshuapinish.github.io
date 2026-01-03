@@ -1,13 +1,8 @@
-
 [
   {
-    "title": "Actual2",
+    "id": "after-update",
+    "title": ":D",
     "date": "2026-01-02",
-    "content": "Holaaa tonotos"
-  },
-  {
-    "title": "Actual1",
-    "date": "2026-01-02",
-    "content": "No lo descargo porq ya lo tengo."
+    "content": "Hola."
   }
 ]
