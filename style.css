@@ -1,5 +1,20 @@
+:root {
+    --bg: #f4f5f7;
+    --text: #111;
+    --muted: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #060a14;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+    }
+}
+
 body {
-    background: linear-gradient(180deg, #0b1220, #060a14);
+    background: var(--bg);
+    color: var(--text);
 }
 
 header {
@@ -15,8 +30,12 @@ header h1 {
 header p {
     margin-top: 8px;
     font-size: 0.9rem;
-    color: #9aa0a6;
+header p,
+.post span,
+footer {
+    color: var(--muted);
 }
+
 
 main {
     max-width: 640px;
@@ -32,8 +51,12 @@ main {
     font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 6px;
-    color: #e5e7eb;
+header p,
+.post span,
+footer {
+    color: var(--muted);
 }
+
 
 .post span {
     font-size: 0.75rem;
@@ -45,8 +68,12 @@ main {
 .post p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #d1d5db;
+header p,
+.post span,
+footer {
+    color: var(--muted);
 }
+
 
 
 footer {
