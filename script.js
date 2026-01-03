@@ -1,35 +1,25 @@
-fetch("posts.json")
-  .then(res => res.json())
-  .then(posts => {
-    const container = document.getElementById("posts");
+// ⏰ Reloj
+function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").innerText =
+        now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+setInterval(updateClock, 1000);
+updateClock();
 
-    posts.reverse().forEach(p => {
-      const article = document.createElement("article");
-      article.className = "post";
+// 🎥 Videos recientes (pon TU ID de canal)
+const videos = [
+    "VIDEO_ID_1",
+    "VIDEO_ID_2",
+    "VIDEO_ID_3"
+];
 
-article.innerHTML = `
-  <h2>
-    <a href="post.html?id=${p.id}">
-      ${p.title}
-    </a>
-  </h2>
-  <span>${p.date}</span>
-  <p>${p.content}</p>
-`;
+const ytDiv = document.getElementById("youtube");
+ytDiv.innerHTML = "";
 
-
-      container.appendChild(article);
-    });
+videos.forEach(id => {
+    ytDiv.innerHTML += `
+        <iframe src="https://www.youtube.com/embed/${id}"
+        allowfullscreen></iframe>
+    `;
 });
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-    });
-}, { threshold: 0.2 });
-
-document.querySelectorAll(".post").forEach(post => {
-    observer.observe(post);
-});
-
